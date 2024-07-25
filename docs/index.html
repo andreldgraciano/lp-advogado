@@ -8,157 +8,175 @@
     <!-- npx tailwindcss -i ./docs/input.css -o ./docs/output.css --watch -->
 </head>
 <body>
-    <header>
-        <div class="bg-white flex items-center justify-between sm:justify-around py-4 px-7 sm:px-0">
-            <a href="" class="flex flex-col items-center text-gray-600">
-                <h1 class="text-2xl md:text-4xl lg:text-5xl font-thin uppercase 2xl:py-1 font-serif">Daniel Geraldo</h1>
-                <p class="text-xs uppercase tracking-widest">Direito Civil</p>
-            </a>
-            <div id="btn-menu-mobile" class="sm:hidden hover:cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                </svg>                  
+    <div class="h-screen flex flex-col">
+        <header class="fixed z-20 w-full">
+            <div class="bg-white flex items-center justify-between sm:justify-around py-4 px-7 sm:px-0">
+                <a href="" class="flex flex-col items-center text-gray-600">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-thin uppercase 2xl:py-1 font-serif">Daniel Geraldo</h1>
+                    <p class="text-xs uppercase tracking-widest">Direito Civil</p>
+                </a>
+                <div id="btn-menu-mobile" class="sm:hidden hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                    </svg>                  
+                </div>
+                <div id="menu-desktop" class="hidden sm:block">
+                    <ul class="flex gap-3 lg:gap-5 text-gray-400 text-xs lg:text-sm">
+                        <li><a href="">Início</a></li>
+                        <li><a href="">Escritório</a></li>
+                        <li><a href="">Área de atuação</a></li>
+                        <li><a href="" class="text-white bg-gray-700 px-2 py-1  shadow-xl">Contato</a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="menu-desktop" class="hidden sm:block">
-                <ul class="flex gap-3 lg:gap-5 text-gray-400 text-xs lg:text-sm">
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Escritório</a></li>
-                    <li><a href="">Área de atuação</a></li>
-                    <li><a href="" class="text-white bg-gray-700 px-2 py-1">Contato</a></li>
+            <div id="menu-mobile" class="pl-7 sm:hidden">
+                <ul class="flex flex-col gap-2 text-gray-400 pb-3 mr-7">
+                    <li class="border-b"><a href="">Início</a></li>
+                    <li class="border-b"><a href="">Escritório</a></li>
+                    <li class="border-b"><a href="">Área de atuação</a></li>
+                    <li class="border-b"><a href="">Contato</a></li>
                 </ul>
             </div>
+        </header>
+    
+        <section class="text-white grow flex justify-center items-center">
+            <div class="w-full h-full bg-cover bg-fixed bg-black bg-opacity-50 saturate-0 absolute"  style="background-image: url(assets/image/bg.jpg);"></div>
+            <div class="w-2/3 h-3/4 backdrop-blur-sm bg-black/50 mt-24 p-6">
+                <div class="text-white flex justify-around h-full">
+                    <div id="div-1" class="w-2/5 text-center h-full flex flex-col justify-around">
+                        <h1 class="text-5xl font-thin uppercase font-serif">Daniel Geraldo</h1>
+                        <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta voluptatum nisi quo esse molestias perspiciatis similique repellat veniam delectus, consequuntur error! Unde alias cumque vel optio dolorum? Illo, necessitatibus nesciunt!</p>
+                        <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                    <div id="div-2" class="w-2/5 flex items-center">
+                        <img src="assets/image/daniel4.jpg" alt="" class="">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <!-- <div class="flex justify-center sm:px-14">
+        <div class="w-1/2 sm:w-2/5 text-center space-y-5 py-8 bg-zinc-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-11 mx-auto">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+            </svg>                      
+            <h2 class="font-semibold text-2xl sm:text-4xl">Daniel Geraldo</h2>
+            <p>textotex texto texto</p>
+            <p>textotex texto texto</p>
+            <p>textotex texto texto</p>
+            <p>textotex texto texto</p>
+            <p>textotex texto texto</p>
         </div>
-        <div id="menu-mobile" class="pl-7 sm:hidden">
-            <ul class="flex flex-col gap-2 text-gray-400 pb-3 mr-7">
-                <li class="border-b"><a href="">Início</a></li>
-                <li class="border-b"><a href="">Escritório</a></li>
-                <li class="border-b"><a href="">Área de atuação</a></li>
-                <li class="border-b"><a href="">Contato</a></li>
-            </ul>
+        <div class="w-1/2 sm:w-2/5 bg-cover bg-center sm:bg-top" style="background-image: url(assets/image/daniel4.jpg);">
         </div>
-    </header>
-    <main>
-        <section class="text-white sm:mt-6">
-            <div class="flex justify-center sm:px-14">
-                <div class="w-1/2 sm:w-2/5 text-center space-y-5 py-8 bg-zinc-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-11 mx-auto">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
-                    </svg>                      
-                    <h2 class="font-semibold text-2xl sm:text-4xl">Daniel Geraldo</h2>
-                    <p>textotex texto texto</p>
-                    <p>textotex texto texto</p>
-                    <p>textotex texto texto</p>
-                    <p>textotex texto texto</p>
-                    <p>textotex texto texto</p>
-                </div>
-                <div class="w-1/2 sm:w-2/5 bg-cover bg-center sm:bg-top" style="background-image: url(assets/image/daniel4.jpg);">
-                </div>
+    </div> -->
+    
+    <section class="flex flex-col items-center pb-10">
+        <div class="flex flex-col items-center px-7 py-8 space-y-3 pt-8 text-gray-700">
+            <p class="text-4xl font-light font-serif">Áreas de Atuação</p>
+            <h2 class="text-sm text-center max-w-xl font-thin">Nossa atuação está voltada exclusivamente para a advocacia criminal.</h2>
+        </div>
+        <div class="flex flex-col flex-wrap md:flex-row max-w-[1000px] items-center md:justify-center md:px-2 gap-5 lg:gap-10">
+            <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-800 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                </svg>                      
+                <h3 class="font-extralight text-xl">Crimes Ambientais</h3>
+                <p class="text-xs">Crimes contra a fauna e flora e crimes contra a administração ambiental.</p>
             </div>
-        </section>
-        
-        <section class="flex flex-col items-center pb-10">
-            <div class="flex flex-col items-center px-7 py-8 space-y-3 pt-14 text-gray-700">
-                <p class="text-4xl font-light font-serif">Áreas de Atuação</p>
-                <h2 class="text-xs text-center max-w-xl font-thin">Nossa atuação está voltada exclusivamente para a advocacia criminal.</h2>
+            <div class="flex flex-col items-center justify-evenly h-[250px] bg-gray-400 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                </svg>
+                <h3 class="font-extralight text-xl">Administração pública</h3>
+                <p class="text-xs">Peculato, corrupção passiva, prevaricação e abandono de função.</p>
             </div>
-            <div class="flex flex-col flex-wrap md:flex-row max-w-[1000px] items-center md:justify-center md:px-2 gap-5 lg:gap-10">
-                <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-900 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
-                    </svg>                      
-                    <h3 class="font-extralight text-xl">Crimes Ambientais</h3>
-                    <p class="text-xs">Crimes contra a fauna e flora e crimes contra a administração ambiental.</p>
-                </div>
-                <div class="flex flex-col items-center justify-evenly h-[250px] bg-gray-400 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
-                    </svg>
-                    <h3 class="font-extralight text-xl">Administração pública</h3>
-                    <p class="text-xs">Peculato, corrupção passiva, prevaricação e abandono de função.</p>
-                </div>
-                <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-900 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-                    </svg>                      
-                    <h3 class="font-extralight text-xl">Crimes definidos na Lei de Drogas</h3>
-                    <p class="text-xs">Tráfico de drogas, associação ao tráfico e consumo pessoal.</p>
-                </div>
-                <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-900 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
-                    </svg>                      
-                    <h3 class="font-extralight text-xl">Crimes praticados por médicos</h3>
-                    <p class="text-xs">Lesão corporal culposa, homicídio culposo e omissão de socorro.</p>
-                </div>
-                <div class="flex flex-col items-center justify-evenly h-[250px] bg-gray-400 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
-                    </svg>
-                    <h3 class="font-extralight text-xl">Crimes contra a pessoa</h3>
-                    <p class="text-xs">Homicídio, feminicídio, lesão corporal, calúnia, difamação e injúria.</p>
-                </div>
-                <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-900 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-                    </svg>                      
-                    <h3 class="font-extralight text-xl">Crimes contra a ordem tributária</h3>
-                    <p class="text-xs">Sonegação fiscal, fraude, conluio e não emissão de notas fiscais.</p>
-                </div>
+            <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-800 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+                </svg>                      
+                <h3 class="font-extralight text-xl">Crimes definidos na Lei de Drogas</h3>
+                <p class="text-xs">Tráfico de drogas, associação ao tráfico e consumo pessoal.</p>
             </div>
-        </section>
+            <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-800 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                </svg>                      
+                <h3 class="font-extralight text-xl">Crimes praticados por médicos</h3>
+                <p class="text-xs">Lesão corporal culposa, homicídio culposo e omissão de socorro.</p>
+            </div>
+            <div class="flex flex-col items-center justify-evenly h-[250px] bg-gray-400 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                </svg>
+                <h3 class="font-extralight text-xl">Crimes contra a pessoa</h3>
+                <p class="text-xs">Homicídio, feminicídio, lesão corporal, calúnia, difamação e injúria.</p>
+            </div>
+            <div class="flex flex-col items-center justify-evenly h-[250px] bg-zinc-800 text-white max-w-[250px] lg:max-w-[250px] text-center px-3 lg:px-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+                </svg>                      
+                <h3 class="font-extralight text-xl">Crimes contra a ordem tributária</h3>
+                <p class="text-xs">Sonegação fiscal, fraude, conluio e não emissão de notas fiscais.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="text-white bg-cover bg-fixed grayscale" style="background-image: url(assets/image/bg.jpg);">
-            <div class="flex flex-col items-center px-7 py-8 space-y-1">
-                <p class="text-sm">Nosso objetivo</p>
-                <h2 class="text-2xl text-center max-w-xl font-thin">Trabalhar para proteger e defender os seus direitos e garantias constitucionais</h2>
+    <section class="text-white bg-cover bg-fixed grayscale relative" style="background-image: url(assets/image/bg.jpg);">
+        <div class="w-full h-full bg-black bg-opacity-50 -z-10 absolute"></div>
+        <div class="flex flex-col items-center px-7 py-8 space-y-1">
+            <p class="text-sm">Nosso objetivo</p>
+            <h2 class="text-2xl text-center max-w-xl font-thin">Trabalhar para proteger e defender os seus direitos e garantias constitucionais</h2>
+        </div>
+        <div class="flex flex-col md:flex-row items-center md:justify-center md:px-2 gap-5 lg:gap-10 pb-10">
+            <div class="flex flex-col justify-around bg-white text-gray-600 h-[200px] sm:h-[220px] max-w-[250px] lg:max-w-[250px] text-center py-3 px-3">
+                <h3 class="font-medium">Bem-vindo</h3>
+                <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt unde facere optio praesentium, deserunt rerum quam nostrum.</p>
+                <!-- <button class="text-xs text-white bg-gray-700 px-2 py-1">Saiba Mais</button> -->
             </div>
-            <div class="flex flex-col md:flex-row items-center md:justify-center md:px-2 gap-5 lg:gap-10 pb-10">
-                <div class="flex flex-col justify-around bg-white text-gray-600 h-[200px] sm:h-[220px] max-w-[250px] lg:max-w-[250px] text-center py-3 px-3">
-                    <h3 class="font-medium">Bem-vindo</h3>
-                    <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt unde facere optio praesentium, deserunt rerum quam nostrum.</p>
-                    <!-- <button class="text-xs text-white bg-gray-700 px-2 py-1">Saiba Mais</button> -->
-                </div>
-                <div class="flex flex-col justify-around bg-white text-gray-600 h-[200px] sm:h-[220px] max-w-[250px] lg:max-w-[250px] text-center py-3 px-3">
-                    <h3 class="font-medium">Contratos</h3>
-                    <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt unde facere optio praesentium, deserunt rerum quam nostrum.</p>
-                    <!-- <button class="text-xs text-white bg-gray-700 px-2 py-1">Saiba Mais</button> -->
-                </div>
-                <div class="flex flex-col justify-around bg-white text-gray-600 h-[200px] sm:h-[220px] max-w-[250px] lg:max-w-[250px] text-center py-3 px-3">
-                    <h3 class="font-medium">Família e Sucessões</h3>
-                    <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt unde facere optio praesentium, deserunt rerum quam nostrum.</p>
-                    <!-- <button class="text-xs text-white bg-gray-700 px-2 py-1">Saiba Mais</button> -->
-                </div>
+            <div class="flex flex-col justify-around bg-white text-gray-600 h-[200px] sm:h-[220px] max-w-[250px] lg:max-w-[250px] text-center py-3 px-3">
+                <h3 class="font-medium">Contratos</h3>
+                <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt unde facere optio praesentium, deserunt rerum quam nostrum.</p>
+                <!-- <button class="text-xs text-white bg-gray-700 px-2 py-1">Saiba Mais</button> -->
             </div>
-        </section>
+            <div class="flex flex-col justify-around bg-white text-gray-600 h-[200px] sm:h-[220px] max-w-[250px] lg:max-w-[250px] text-center py-3 px-3">
+                <h3 class="font-medium">Família e Sucessões</h3>
+                <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt unde facere optio praesentium, deserunt rerum quam nostrum.</p>
+                <!-- <button class="text-xs text-white bg-gray-700 px-2 py-1">Saiba Mais</button> -->
+            </div>
+        </div>
+    </section>
 
-        <section class="mt-10 mb-6 flex justify-center">
-            <div class="flex flex-col sm:flex-row sm:max-w-[800px] lg:w-[850px] gap-8 md:gap-14">
-                <div class="text-gray-700">
-                    <h1 class="text-2xl border-l-4 border-gray-300 pl-3">Contato <br><br> </h1>
-                    <p class="pl-4 font-light">Entre em contato ou envie um e-mail para</p>
-                    <a href="#" class="pl-4">email@gmail.com</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <a href="#" class="flex items-center gap-3 pl-4 sm:pl-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                        </svg>
-                        <p class="text-sm">(99) 9999-9999</p>
-                    </a>
-                    <a href="#" class="flex items-center gap-3 pl-4 sm:pl-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-                        </svg>
-                        <p class="text-sm">(99) 9999-9999</p>
-                    </a>
-                </div>
+    <section class="mt-10 mb-6 flex justify-center">
+        <div class="flex flex-col sm:flex-row sm:max-w-[850px] lg:w-[850px] gap-8 md:gap-14">
+            <div class="text-gray-700">
+                <h1 class="text-2xl border-l-4 border-gray-300 pl-3">Contato <br><br> </h1>
+                <p class="pl-4 font-light">Entre em contato ou envie um e-mail para</p>
+                <a href="#" class="pl-4">email@gmail.com</a>
             </div>
-        </section>
-    </main>
+            <div class="flex flex-col gap-4">
+                <a href="#" class="flex items-center gap-3 pl-4 sm:pl-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                    <p class="text-sm font-serif">(99) 9999-9999</p>
+                </a>
+                <a href="#" class="flex items-center gap-3 pl-4 sm:pl-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                    </svg>
+                    <p class="text-sm font-serif">(99) 9999-9999</p>
+                </a>
+            </div>
+        </div>
+    </section>
     <footer class="">
         <div class="flex flex-col md:flex-row gap-4 items-center py-5 justify-center mb-5">
             <h3 class="text-2xl font-serif text-gray-600">Ficou com alguma dúvida?</h3>
-            <button class="uppercase bg-gray-900 text-xs text-white font-semibold px-2 py-2 mt-3 md:mt-0">Entre em contato</button>
+            <button class="uppercase bg-gray-900 text-xs text-white font-semibold px-2 py-2 mt-3 md:mt-0 shadow-xl">Entre em contato</button>
         </div>
     </footer>
 </body>
